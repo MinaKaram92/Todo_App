@@ -66,6 +66,8 @@ Widget buildTaskItem(context, Task task) {
                   Text(
                     '${task.taskTitle}',
                     style: Theme.of(context).textTheme.headline6,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   SizedBox(
                     width: 10.0,
@@ -145,6 +147,7 @@ Widget defaultTextFormField({
 }) {
   return TextFormField(
     decoration: InputDecoration(
+      counterText: '',
       labelText: label,
       hintStyle: hintStyle,
       //prefixIcon: Icon(prefix),
@@ -180,6 +183,7 @@ Widget defaultTextFormField({
     style: labelStyle,
     autovalidateMode: AutovalidateMode.onUserInteraction,
     maxLines: 1,
+    maxLength: 15,
   );
 }
 

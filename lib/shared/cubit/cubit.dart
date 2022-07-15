@@ -191,7 +191,6 @@ class TodoCubit extends Cubit<TodoStates> {
   List<Task>? currentList = [];
 
   void changeTaskList(String type) {
-    print('type : $type');
     if (type == 'All') {
       currentList = allTasks;
     }
